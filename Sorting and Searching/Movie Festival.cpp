@@ -6,7 +6,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+ 
 void solve(){
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
@@ -28,7 +28,7 @@ void solve(){
     }
     cout << res;
 }
-
+ 
 int main() {
     solve();
     return 0;

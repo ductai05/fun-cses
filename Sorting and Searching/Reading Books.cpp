@@ -6,10 +6,10 @@
 #include <algorithm>
 #include <vector>
 #include <bitset>
-
+ 
 #define ll long long
 using namespace std;
-
+ 
 void solve(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
@@ -22,7 +22,7 @@ void solve(){
         return a < b;
     });
     // for (ll i = 0; i < n; i++) cout << a[i] << " ";
-
+ 
     ll rest = 0;
     for (ll i = 0; i < n - 1; i++) rest += a[i];
     if (rest >= a[n - 1]){
@@ -31,7 +31,7 @@ void solve(){
         cout << 2 * a[n - 1];
     }
 }
-
+ 
 int main() {
     solve();
     return 0;

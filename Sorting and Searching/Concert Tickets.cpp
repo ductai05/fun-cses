@@ -7,22 +7,22 @@
 #include <vector>
 #include <algorithm>
 #include <unordered_map>
-
+ 
 #define ll long long
 using namespace std;
-
+ 
 void solve(){
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
     ll n, m; cin >> n >> m;
-
+ 
     ll x;
     multiset<ll> tickets;
     for (ll i = 0; i < n; i++) {
         cin >> x;
         tickets.insert(x);
     }
-
+ 
     ll t;
     for (ll i = 0; i < m; i++) {
         cin >> t;
@@ -34,10 +34,10 @@ void solve(){
             cout << *it << "\n";
             tickets.erase(it);
         }
-
+ 
     }
 }
-
+ 
 int main() {
     solve();
     return 0;

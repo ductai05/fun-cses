@@ -4,9 +4,9 @@
 // --------------------------------
 #include <iostream>
 #define ll long long
-
+ 
 using namespace std;
-
+ 
 bool canMake(const ll* a, const ll n, const ll time, const ll product){
     ll pd = 0;
     for (int i = 0; i < n; i++){
@@ -17,13 +17,13 @@ bool canMake(const ll* a, const ll n, const ll time, const ll product){
     }
     return pd >= product;
 }
-
+ 
 void solve(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
-
+ 
     ll n, t; cin >> n >> t;
     ll a[n];
     for (ll i = 0; i < n; i++) cin >> a[i];
@@ -40,7 +40,7 @@ void solve(){
     }
     cout << hi;
 }
-
+ 
 int main() {
     solve();
     return 0;

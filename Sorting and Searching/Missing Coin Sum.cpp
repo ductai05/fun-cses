@@ -5,14 +5,14 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
+ 
 #define ll long long
 using namespace std;
-
+ 
 void solve(){
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
-
+ 
     ll n; cin >> n;
     ll res = 1;
     vector<ll> num(n);
@@ -28,7 +28,7 @@ void solve(){
     }
     cout << res;
 }
-
+ 
 int main() {
     solve();
     return 0;

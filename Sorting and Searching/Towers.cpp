@@ -4,13 +4,13 @@
 // --------------------------------
 #include <iostream>
 #include <set>
-
+ 
 using namespace std;
-
+ 
 void solve(){
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
-
+ 
     multiset<int> ms;
     int n, x; cin >> n;
     for (int i = 0; i < n; i++){
@@ -21,7 +21,7 @@ void solve(){
     }
     cout << ms.size();
 }
-
+ 
 int main() {
     solve();
     return 0;

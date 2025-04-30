@@ -7,7 +7,7 @@
 #include <algorithm>
 #define ll long long
 using namespace std;
-
+ 
 class Range{
 public:
     ll first;
@@ -23,7 +23,7 @@ public:
         otherContain = false;
     }
 };
-
+ 
 void solve(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
@@ -40,7 +40,7 @@ void solve(){
         if (a->first == b->first) return a->second > b->second;
         return a->first < b->first;
     });
-
+ 
     ll minR = 2e9;
     for (ll i = n - 1; i > -1; i--){ // contain
         if (ranges[i]->second >= minR) ranges[i]->contain = true;
@@ -51,17 +51,17 @@ void solve(){
         if (ranges[i]->second <= maxR) ranges[i]->otherContain = true;
         maxR = max(maxR, ranges[i]->second);
     }
-
+ 
     sort(ranges.begin(), ranges.end(), [](Range* a, Range* b){
         return a->id < b->id;
     });
-
+ 
     for (ll i = 0; i < n; i++) cout << ranges[i]->contain << " "; 
     cout << "\n";
     for (ll i = 0; i < n; i++) cout << ranges[i]->otherContain << " "; 
     cout << "\n";
 }
-
+ 
 int main() {
     solve();
     return 0;

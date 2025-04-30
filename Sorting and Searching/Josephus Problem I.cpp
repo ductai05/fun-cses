@@ -4,9 +4,9 @@
 // --------------------------------
 #include <iostream>
 #include <queue>
-
+ 
 using namespace std;
-
+ 
 void solve(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
@@ -15,7 +15,7 @@ void solve(){
     int n; cin >> n;
     queue<int> q;
     for (int i = 1; i <= n; i++) q.push(i);
-
+ 
     bool remove = false;
     while (!q.empty()){
         int ele = q.front();
@@ -28,7 +28,7 @@ void solve(){
         remove = !remove;
     }
 }
-
+ 
 int main() {
     solve();
     return 0;

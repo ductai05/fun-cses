@@ -5,16 +5,16 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
+ 
 #define ll long long
 using namespace std;
-
+ 
 void solve(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
-
+ 
     ll n; cin >> n;
     vector<pair<ll, ll>> ad(n);
     for (ll i = 0; i < n; i++) cin >> ad[i].first >> ad[i].second;
@@ -29,7 +29,7 @@ void solve(){
     cout << res;
     
 }
-
+ 
 int main() {
     solve();
     return 0;

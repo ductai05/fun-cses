@@ -5,15 +5,15 @@
 #include <iostream>
 #include <set>
 #include <cmath>
-
+ 
 using namespace std;
-
+ 
 void solve(){
     ios::sync_with_stdio(false);
 	cin.tie(NULL);
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
-
+ 
     int x, n; cin >> x >> n;
     set<int> light{0, x};
     multiset<int> dist{x};
@@ -26,12 +26,12 @@ void solve(){
         dist.insert(*it - temp);
         dist.insert(temp - *it2);
         light.insert(temp);
-
+ 
         auto res = dist.end();
         cout << *(--res) << " ";
     }
 }
-
+ 
 int main() {
     solve();
     return 0;
