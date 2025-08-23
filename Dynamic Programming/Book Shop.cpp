@@ -18,16 +18,15 @@ void solve(){
     for (int i = 1; i <= n; i++) cin >> prices[i];
     for (int i = 1; i <= n; i++) cin >> pages[i];
 
-    // dp[n][x]: number of pages, in first n books & limit x money
+    // dp[n][x]: number of max pages, first n books, limit x money
     vector<vector<int>> dp(n + 1, vector<int> (x + 1, 0));
     for (int book = 1; book <= n; book++){
         for (int money = 0; money <= x; money++){
             if (prices[book] > money) dp[book][money] = dp[book - 1][money];
-            else {
-                dp[book][money] = max(dp[book - 1][money], dp[book - 1][money - prices[book]] + pages[book]);
-            }
+            else dp[book][money] = max(dp[book - 1][money], dp[book - 1][money - prices[book]] + pages[book]);
         }
     }
+    
     cout << dp[n][x];
 }
 
