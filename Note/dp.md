@@ -16,3 +16,25 @@ Ví dụ: Với mảng [0, 2, 0], n = 3, m = 3:
 - dp[3][2] = dp[2][1] + dp[2][2] + dp[2][3] = 0 + 3 + 0 = 3. 
 - dp[3][3] = dp[2][2] + dp[2][3] = 3 + 0 = 3 
 => res = 3 + 3 + 3 = 9.
+
+
+### Bài 2413: Counting Towers
+Có 2 cách để xây dựng 1 tầng:
+- Cách 1: 2 khối con (cùng 1 tầng) tách nhau, hay là thuộc 2 khối khác nhau
+- Cách 2: 2 khối con (cùng 1 tầng) gộp nhau, hay là thuộc cùng 1 khối
+
+Xét các trường hợp:
+- Với tầng 1, cách 1 -> tầng 2, cách 1 có 4 trường hợp
+- Với tầng 1, cách 1 -> tầng 2, cách 2 có 1 trường hợp
+- Với tầng 1, cách 2 -> tầng 2, cách 1 có 1 trường hợp
+- Với tầng 1, cách 2 -> tầng 2, cách 2 có 2 trường hợp
+
+Công thức truy hồi:
+a_n = 4 * a_n-1 + b_n-1
+b_n = a_n-1 + 2 * b_n-1 
+
+=> a_n+1 = 6 * a_n - 7 a_n-1
+=> b_n+1 = 6 * b_n - 7 b_n-1
+
+Vì phương trình đặc trưng của công thức truy hồi nghiệm xấu, nên không sử dụng 
+tính toán thuần túy. Không lưu mảng, giúp tăng tốc độ. 
