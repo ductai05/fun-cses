@@ -38,3 +38,8 @@ b_n = a_n-1 + 2 * b_n-1
 
 Vì phương trình đặc trưng của công thức truy hồi nghiệm xấu, nên không sử dụng 
 tính toán thuần túy. Không lưu mảng, giúp tăng tốc độ. 
+
+### Bài 1624: Chessboard and Queens
+
+Ý tưởng: các quân hậu nằm trên cột khác nhau. Xét điều kiện các quân hậu nằm trên các dòng khác nhau 
+và không nằm cùng đường chéo. Dùng backtracking để quay lui.
