@@ -6,9 +6,19 @@ import os
 
 
 def solve():
-    # input_data = sys.stdin.read().split()
-    # if not input_data: return
-    # it = iter(input_data)
+    input_data = sys.stdin.read().split()
+    it = iter(input_data)
+    n = int(next(it))
+    l = [int(next(it)) for _ in range (n-1)]
+    # print(*l)
+
+    xor_l, xor_n = 0, 0
+    for i in l:
+        xor_l ^= i
+    for i in range(1, n + 1):
+        xor_n ^= i
+    print(xor_l ^ xor_n)
+
     pass
 
 
