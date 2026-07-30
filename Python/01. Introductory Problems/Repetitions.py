@@ -6,10 +6,19 @@ import os
 
 
 def solve():
-    # input_data = sys.stdin.read().split()
-    # if not input_data: return
-    # it = iter(input_data)
-    pass
+    input_data = sys.stdin.read().split()
+    it = iter(input_data)
+    DNA = str(next(it))
+    ans, max_ans = 1, 1
+    pre_char = 'X'
+    for char in DNA:
+        if char != pre_char:
+            pre_char = char
+            ans = 1
+        else:
+            ans += 1
+            max_ans = max(max_ans, ans)
+    print(max_ans)
 
 
 def main():
