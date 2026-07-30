@@ -6,10 +6,19 @@ import os
 
 
 def solve():
-    # input_data = sys.stdin.read().split()
+    input_data = sys.stdin.read().split()
     # if not input_data: return
-    # it = iter(input_data)
-    pass
+    it = iter(input_data)
+    n = int(next(it))
+    arr = [int(next(it)) for _ in range(n)]
+    max_pre = arr[0]
+    ans = 0
+    for i in arr:
+        if i < max_pre:
+            ans += max_pre - i
+        else:
+            max_pre = max(i, max_pre)
+    print(ans)
 
 
 def main():
