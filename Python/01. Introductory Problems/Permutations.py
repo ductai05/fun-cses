@@ -6,10 +6,23 @@ import os
 
 
 def solve():
-    # input_data = sys.stdin.read().split()
+    input_data = sys.stdin.read().split()
     # if not input_data: return
-    # it = iter(input_data)
-    pass
+    it = iter(input_data)
+    n = int(next(it))
+    if n == 1:
+        print(1)
+        return
+    elif n <= 3:
+        print("NO SOLUTION")
+        return
+    
+    for i in range(1, n+1):
+        if i % 2 == 0:
+            print(i, end=" ")
+    for i in range(1, n+1):
+        if i % 2 == 1:
+            print(i, end=" ")
 
 
 def main():
